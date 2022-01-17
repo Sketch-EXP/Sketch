@@ -25,10 +25,8 @@ This dataset contains all comments and articles of New York Times from January 2
 ## Numerical Experiments <a name="experiments"></a>
 ### Synthetic data <a name="sd"></a>
 
-* [GIFGIF](http://lucas.maystre.ch/gifgif-data) dataset contains outcomes for 17 different metrics (happiness, pride, fear, amusement, contempt, ...)
-* In our experiments, we used three metrics (amusement, contempt, and happines)
-* The experiments are conducted by using full dataset for the three metrics, and using a sample from the strongly connected coponent.
-* For the sample datasets, we include the experiment for MM algorithm with normalisation at each iterations such that \sum_{i=1}^n\exp(w_i)=1.
+* In our experiments, we examine three utility functions (max, CES-2 and square-root of sum)
+* We fix a set of 50 items and generate 500 training samples to evaluate the set utility functions. These hyperparameters can be changed in the framework.py file.
 
 #### Step-by-step instructions:
 

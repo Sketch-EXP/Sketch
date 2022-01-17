@@ -71,6 +71,7 @@ def Pareto_discrete(n, eps, shapes, m):
     probs = np.c_[probs, eps*np.ones(n)]
     return values, probs
     
+    
 def Discretized_sample(n, n_sample, values, probs):
     samples = []
     for i in range(n):

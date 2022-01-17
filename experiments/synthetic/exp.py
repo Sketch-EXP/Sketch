@@ -65,17 +65,6 @@ def get_valueS(n, k, n_sample, samples, obj, set_items):
     for items in set_items:
         value_S.append(score_value(n, k, items, test_scores))
     return value_S
-
-## add to outputs
-def add_output(eps, value_P, value_Qs, distribution, obj, n_sets):
-    df = pd.read_csv('./res_comp.csv')
-    for i in range(len(eps)):
-        ratio = np.array(value_Qs[i])/ np.array(value_P)
-        for j in range(n_sets):
-            df = df.append({'obj': obj, 'distribution': distribution,
-                        'eps': eps[i], 'test_number': j+1,  'value_P': value_P[j], 'value_Q': value_Qs[i][j], 
-                        'ratio': ratio[j]}, ignore_index = True)
-    df.to_csv('res_comp.csv', index=False)
    
    
 # compare u(S) and v(S) for some set_items
